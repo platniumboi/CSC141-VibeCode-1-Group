@@ -17,4 +17,25 @@ class question:
 
     def checkifcorrect(self):
         player_input = input("What is your answer?")
+        if player_input == "A" or player_input == "a":
+            if 0 == self.solution:
+                return True
+            else:
+                return False
+        elif player_input == "B" or player_input == "a":
+            if 1 == self.solution:
+                return True
+            else:
+                return False
+        elif player_input == "C" or player_input == "c":
+            if 2 == self.solution:
+                return True
+            else:
+                return False
+        elif player_input == "D" or player_input == "d":
+            if 3 == self.solution:
+                return True
+            else:
+                return False
+            
         
