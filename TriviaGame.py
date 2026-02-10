@@ -49,7 +49,27 @@ class questionbank:
     def addquestion(self, newquestion):
         self.questions.append(newquestion)
 
-    def getrandomquestion(self):
-        return random.choice(self.questions)
+    def removequestion(self, question):
+        self.questions.remove(question)
             
+    def getrandomquestion(self):
+        randomindex = random.randint(0, len(self.questions) - 1)
+        removedquestion = self.questions[randomindex]
+        self.removequestion(removedquestion)
+        return removedquestion
+
+def main():
+    question1 = question(lines[0], [lines[1], lines[2], lines[3], lines[4]], 0)
+    question2 = question(lines[5], [lines[6], lines[7], lines[8], lines[9]], 1)
+    question3 = question(lines[10], [lines[11], lines[12], lines[13], lines[14]], 2)
+    question4 = question(lines[15], [lines[16], lines[17], lines[18], lines[19]], 3)
+    question5 = question(lines[20], [lines[21], lines[22], lines[23], lines[24]], 0)
+
+    bank = questionbank()
+    bank.addquestion(question1)
+    bank.addquestion(question2)
+    bank.addquestion(question3)
+    bank.addquestion(question4)
+    bank.addquestion(question5)
+
         
