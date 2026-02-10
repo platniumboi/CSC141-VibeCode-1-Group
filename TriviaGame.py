@@ -1,5 +1,8 @@
 import random
 
+textfile = open("triviaquestions.txt", "r")
+lines = textfile.readlines()
+
 class question:
     question = str()
     answers = []
@@ -37,5 +40,16 @@ class question:
                 return True
             else:
                 return False
+class questionbank:
+    questions = []
+
+    def __init__ (self):
+        self.questions = []
+
+    def addquestion(self, newquestion):
+        self.questions.append(newquestion)
+
+    def getrandomquestion(self):
+        return random.choice(self.questions)
             
         
