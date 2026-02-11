@@ -1,6 +1,7 @@
 import random
 
-textfile = open("triviaquestions.txt", "r")
+
+textfile = open("questions.txt", "r")
 lines = textfile.readlines()
 
 class question:
@@ -72,4 +73,4 @@ def main():
     bank.addquestion(question4)
     bank.addquestion(question5)
 
-        
+    print(bank.getrandomquestion)
